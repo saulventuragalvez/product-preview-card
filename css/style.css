@@ -1,0 +1,137 @@
+
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+    --title: 'Fraunces', sans-serif;
+    --body: 'Montserrat', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.4rem;
+    font-family: var(--body);
+    background-color: var(--cream);
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-cyan);
+}
+/* GLOBALES */
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 97vh;
+}
+
+.card {
+    background-color: var(--white);
+    width: 90%;
+    height: 90%;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    border-radius: 1rem;
+    overflow: hidden;
+    }
+
+@media (min-width: 768px) {
+    .card {
+    width: 60rem;
+    height: 45rem;
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+.left {
+    background-image: url(../images/image-product-mobile.jpg);
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@media (min-width: 768px) {
+    .left {
+        background-image: url(../images/image-product-desktop.jpg);
+    }
+}
+
+
+.right {
+    padding: 3rem;
+}
+
+.right h3 {
+    color: var(--dark-grayish-blue);
+    font-weight: 500;   
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    margin: 0;
+    font-size: 1.4rem
+}
+
+.right h1 {
+    font-family: var(--title);
+    color: var(--very-dark-blue);
+    margin: 2.5rem 0;
+    font-size: 3rem;
+}
+
+.parrafo {
+    color: var(--dark-grayish-blue);
+    line-height: 2.2rem;
+}
+
+.precio {
+    font-size: 3rem;
+    font-family: var(--title);
+    color: var(--dark-cyan);
+    position: relative;
+}
+
+.precio span {
+    font-size: 1.4rem;
+    color: var(--dark-grayish-blue);
+    font-family: var(--body);
+    text-decoration: line-through;
+    margin-left: 2rem;
+    position: absolute;
+    top: 1rem
+}
+
+.boton {
+    background-color: var(--dark-cyan);
+    border: none;
+    border-radius: 1rem;
+    display: block;
+    width: 100%;
+    color: var(--white);
+    padding: 1.5rem 0;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton-img {
+        margin-right: 1rem;
+}
+
+.attribution {
+    text-align: center;
+    color: var(--dark-grayish-blue);
+}
